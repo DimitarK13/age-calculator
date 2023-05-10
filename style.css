@@ -1,3 +1,81 @@
+:root {
+  --clr-primary-400: hsl(259, 100%, 65%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(0, 0%, 94%);
+  --clr-neutral-300: hsl(0, 0%, 86%);
+  --clr-neutral-400: hsl(0, 1%, 44%);
+  --clr-neutral-800: hsl(0, 0%, 8%);
+  --clr-error: hsl(0, 100%, 67%);
+
+  --ff: 'Poppins', sans-serif;
+
+  --fs-inputs: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-inputs: 2rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--ff);
+  font-weight: 400;
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 .attribution {
   position: absolute;
   font-size: 11px;
