@@ -48,10 +48,14 @@ inputs.forEach((input) => {
   let errMsg = document.createElement('p');
   parent.append(errMsg);
   errMsg.classList.add(`err-${id}`);
+  errMsg.classList.add(`err`);
   input.addEventListener('blur', () => {
     if (validateInput(input, id)) {
       input.value = input.value.padStart(2, '0');
       document.querySelector(`.err-${id}`).textContent = '';
+      parent.classList.remove('err');
+    } else {
+      parent.classList.add('err');
     }
   });
 });
@@ -61,8 +65,12 @@ const calcAge = () => {
   // Check if all inputs are valid
   inputs.forEach((input) => {
     const id = input.getAttribute('id');
+    const parent = input.parentElement;
     if (!validateInput(input, id)) {
       validInputs = false;
+      parent.classList.add('err');
+    } else {
+      parent.classList.remove('err');
     }
   });
   if (!validInputs) {
