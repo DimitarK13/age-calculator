@@ -117,3 +117,6 @@ const resetFields = () => {
 };
 
 calculate_Btn.addEventListener('click', calcAge);
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') calcAge();
+});
