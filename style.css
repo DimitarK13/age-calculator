@@ -1,0 +1,11 @@
+.attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
