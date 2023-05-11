@@ -23,8 +23,9 @@
     <script defer src="index.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="inputs">
+    <h1 class="sr-only">Age Calculator App</h1>
+    <main class="container">
+      <section class="inputs">
         <div>
           <label for="date">Day</label>
           <input
@@ -55,27 +56,27 @@
             class="input"
           />
         </div>
-      </div>
+      </section>
 
-      <div class="separator">
+      <section class="separator">
         <div class="horizontal-line"></div>
         <button id="calculate-btn" class="calculate-btn">
           <img src="assets/images/icon-arrow.svg" alt="Arrow down" />
         </button>
-      </div>
+      </section>
 
-      <div class="outputs">
+      <section class="outputs">
         <p><span id="years-output">--</span> years</p>
         <p><span id="months-output">--</span> months</p>
         <p><span id="days-output">--</span> days</p>
-      </div>
-    </div>
+      </section>
+    </main>
 
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="https://dimitark.com">Dimitar Kalapocev</a>.
-    </div>
+    </footer>
   </body>
 </html>
